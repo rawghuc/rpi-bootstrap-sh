@@ -62,6 +62,8 @@ unzip -q "$ZIP_PATH" -d "$WORKDIR"
 # GitHub ZIP extracts into a subfolder — find it
 INSTALL_ROOT="$(find "$WORKDIR" -mindepth 1 -maxdepth 1 -type d | head -n1)"
 
+echo "[bootstrap] install root: $INSTALL_ROOT"
+
 if [ -z "$INSTALL_ROOT" ]; then
   echo "[bootstrap] ERROR: installer directory not found"
   exit 1
