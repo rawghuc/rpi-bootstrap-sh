@@ -6,7 +6,7 @@ set -euo pipefail
 ##############################################
 
 # Short URL that redirects to installer ZIP
-INSTALLER_ZIP_URL="https://install.innoway.io/rpi"
+INSTALLER_ZIP_URL="http://parksense.co.in/rawghuc/rpi-scripts-installer"
 
 # Temporary working directory (randomized)
 WORKDIR="$(mktemp -d -t rpi-installer-XXXXXXXX)"
