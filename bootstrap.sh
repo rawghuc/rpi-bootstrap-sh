@@ -77,7 +77,7 @@ INSTALL_DIR="$INSTALL_ROOT/installer"
 
 if [ ! -f "$INSTALL_DIR/install-master.sh" ]; then
   echo "[bootstrap] ERROR: install-master.sh not found"
-  cd $INSTALL_DIR
+  cd $INSTALL_ROOT
   ls
   exit 1
 fi
