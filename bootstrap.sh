@@ -73,7 +73,7 @@ fi
 # LOCATE INSTALLER SCRIPTS
 ##############################################
 
-INSTALL_DIR="$INSTALL_ROOT/installer"
+INSTALL_DIR="$INSTALL_ROOT"
 
 if [ ! -f "$INSTALL_DIR/install-master.sh" ]; then
   echo "[bootstrap] ERROR: install-master.sh not found"
