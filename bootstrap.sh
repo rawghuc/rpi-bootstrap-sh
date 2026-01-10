@@ -15,21 +15,21 @@ WORKDIR="$(mktemp -d -t rpi-installer-XXXXXXXX)"
 # CLEANUP LOGIC (CRITICAL)
 ##############################################
 
-cleanup() {
-  echo "[bootstrap] Cleaning up installer files..."
-  if [ -d "$WORKDIR" ]; then
-    # Overwrite + remove for defense-in-depth
-    find "$WORKDIR" -type f -exec shred -u {} \; 2>/dev/null || true
-    rm -rf "$WORKDIR"
-  fi
-}
+# cleanup() {
+#   echo "[bootstrap] Cleaning up installer files..."
+#   if [ -d "$WORKDIR" ]; then
+#     # Overwrite + remove for defense-in-depth
+#     find "$WORKDIR" -type f -exec shred -u {} \; 2>/dev/null || true
+#     rm -rf "$WORKDIR"
+#   fi
+# }
 
 # Cleanup on:
 # - script exit
 # - error
 # - Ctrl+C
 # - kill
-trap cleanup EXIT INT TERM
+# trap cleanup EXIT INT TERM
 
 ##############################################
 # SANITY CHECKS
